@@ -1,4 +1,5 @@
-# Brinson-attribution
+# Brinson Attribution
+
 ### Institutional portfolio performance attribution analysis
 
 The files here illustrate Brinson performance attribution.
@@ -7,9 +8,32 @@ Institutional investment portfolios are typically constructed with a strategic a
 
 The basic construct of Brinson analaysis is straightforward and reflected in this formula:
 
-$$(R+\Delta R) * (W+\DeltaW) = Total Return$$
+$$(R+\Delta R) * (W+\Delta W) = Total Return$$
 
 where R is the benchmark return, W is the policy weight and the deltas are the difference between policy or benchmark and actual.
 
+Expanding this polynomial we get:
 
+$$R * W = Total\; Portfolio\; Benchmark\; Return$$
 
+$$\Delta R * W = Selection\; Effect$$
+
+$$R * \Delta W = Allocation\; Effect$$
+
+$$\Delta R * \Delta W = Interaction\; Effect$$
+
+So, selection effect is variation in return due to asset class returns in excess of benchmark returns.  Allocation effect is the variation in return due to assets held in weights different from policy.  Interaction effect is a blended effect of the other two.
+
+The sum of these four terms is the actual portfolio return.
+
+### Problems in a multi-period context
+
+The forgoing formulas work in a single period.  But if you chain together multiple periods, the polynomial expansion gets more and more complicated and the blended returns overwhelm the analysis.  
+
+This phenomenon is explored in a paper [*Linking of Attributes Results*](http://www.frongello.com/support/Works/Chap20RiskBook.pdf) by Andrew Frongello.  In this code we provide a function called `frong` which implements the method for dealing with this problem recommended by Frongello.
+
+### Files provided
+
+`attribution.RMD` illustrates Brinson attribution calculations and provides the `frong` function.
+
+`attribgraph.RMD` provides a graphical method for presenting attribution results using a dual y axis to combine allocation results and weight differences in a single chart.

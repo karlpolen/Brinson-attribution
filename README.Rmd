@@ -2,7 +2,7 @@
 title: "Brinson Attribution"
 output: 
   html_document:
-    save_md: TRUE
+    keep_md: TRUE
 ---
 
 ### Institutional portfolio performance attribution analysis
