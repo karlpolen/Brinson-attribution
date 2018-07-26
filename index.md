@@ -39,6 +39,6 @@ This phenomenon is explored in a paper [*Linking of Attributes Results*](http://
 
 ### Files provided
 
-`attribution.RMD` illustrates Brinson attribution calculations and provides the `frong` function.
+[attribution.RMD](attribution.md) illustrates Brinson attribution calculations and provides the `frong` function.
 
-`attribgraph.RMD` provides a graphical method for presenting attribution results using a dual y axis to combine allocation results and weight differences in a single chart.
+[attribgraph.RMD](attribgraph.md) provides a graphical method for presenting attribution results using a dual y axis to combine allocation results and weight differences in a single chart.
